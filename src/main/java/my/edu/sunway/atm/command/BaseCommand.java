@@ -20,7 +20,7 @@ public abstract class BaseCommand implements Command {
                 return new CommandResponse(false, handler.getDetailedMessage());
             }
         }
-        return new CommandResponse(true, "Eject card command performed successfully");
+        return new CommandResponse(true, "Operation performed successfully");
     }
 
 }
