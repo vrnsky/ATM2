@@ -1,11 +1,13 @@
 package my.edu.sunway.atm.command;
 
-import my.edu.sunway.atm.Context;
-import my.edu.sunway.atm.dto.CommandResponse;
+import my.edu.sunway.atm.chain.Handler;
 
-public class InsertCard implements Command {
+import java.util.List;
 
-    public CommandResponse execute(Context context, String command) {
-        return null;
+public class InsertCard extends BaseCommand implements Command {
+
+    public InsertCard(List<Handler> handlers) {
+        super(handlers);
     }
+
 }

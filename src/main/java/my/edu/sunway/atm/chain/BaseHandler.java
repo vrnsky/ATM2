@@ -1,21 +1,22 @@
 package my.edu.sunway.atm.chain;
 
 import my.edu.sunway.atm.Context;
-import my.edu.sunway.atm.dto.ValidationResponse;
 
-public class BaseHandler implements Handler {
+public abstract class BaseHandler implements Handler {
 
-    private Handler nextHandler;
+    protected Handler nextHandler;
 
 
     public void setNext(Handler handler) {
         this.nextHandler = nextHandler;
     }
 
-    public ValidationResponse handle(Context context) {
+    public boolean handle(Context context) {
         if (this.nextHandler != null) {
             return nextHandler.handle(context);
         }
-        return new  ValidationResponse("Successfull operation");
+        return true;
     }
+
+    public abstract String getDetailedMessage();
 }

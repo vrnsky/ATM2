@@ -7,5 +7,7 @@ public interface Handler {
 
     void setNext(Handler handler);
 
-    ValidationResponse handle(Context context);
+    boolean handle(Context context);
+
+    String getDetailedMessage();
 }

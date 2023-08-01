@@ -1,10 +1,13 @@
 package my.edu.sunway.atm.command;
 
-import my.edu.sunway.atm.Context;
-import my.edu.sunway.atm.dto.CommandResponse;
+import my.edu.sunway.atm.chain.Handler;
 
-public class EjectCard implements  Command {
-    public CommandResponse execute(Context context, String command) {
-        return null;
+import java.util.List;
+
+public class EjectCard extends BaseCommand implements Command {
+
+    public EjectCard(List<Handler> handlers) {
+        super(handlers);
     }
+
 }
